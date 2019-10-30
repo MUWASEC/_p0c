@@ -6,7 +6,7 @@
     </pre>
     <h4>List Poc : </h4>
 <ul>
-  <li>CVE-2019-11510</li>
+  <li>pwn the pulse</li>
 </ul>
   </body>
   <p>all signature belong to <a href="https://www.facebook.com/muwa.0">@muwa00</a></p>
