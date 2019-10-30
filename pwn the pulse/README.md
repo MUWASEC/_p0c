@@ -23,4 +23,4 @@ It will parse the credential after dumping hash + plain.
     ./cred_extract.sh log/xxx__hash.bin log/xxx__plain.bin out.txt
 </pre>
 
-thx for @_orangetsai_ for the research.
+thx @__orangetsai__ for the research.
