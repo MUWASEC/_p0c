@@ -1,3 +1,4 @@
+**PwnTHEPulse**
 <pre>
 pwnpulse.py : 
 CVE-2019-11510 with magic function such as :
@@ -21,3 +22,5 @@ It will parse the credential after dumping hash + plain.
 - command :
     ./cred_extract.sh log/xxx__hash.bin log/xxx__plain.bin out.txt
 </pre>
+
+@_muwa00_
