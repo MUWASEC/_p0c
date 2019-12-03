@@ -31,7 +31,7 @@ Invalid command.
 xxxx:xxx:xxx> 
 ```
 
-### HiNET GPON on port 3097
+### HiNET GPON on port 3097 (Command Injection)
 Like other modem/router device, there's shortcut command for spawn help menu/list with command "?".<br>
 This is snippet line of code that provide function for command "?" :
 ```c
