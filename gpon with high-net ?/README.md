@@ -82,4 +82,4 @@ PWD=/tmp
 <br>
 
 ##### Credits & Thx for :
-* [@OrangeTsai](https://github.com/chjj/marked)
+* [@OrangeTsai](https://devco.re/blog/2019/11/11/HiNet-GPON-Modem-RCE/)
