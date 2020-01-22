@@ -23,4 +23,6 @@ It will parse the credential after dumping hash + plain.
     ./cred_extract.sh log/xxx__hash.bin log/xxx__plain.bin out.txt
 </pre>
 
-thx @__orangetsai__ for the research.
+
+##### Credits & Thx for :
+* [@OrangeTsai](https://devco.re/blog/2019/09/02/attacking-ssl-vpn-part-3-the-golden-Pulse-Secure-ssl-vpn-rce-chain-with-Twitter-as-case-study/)
