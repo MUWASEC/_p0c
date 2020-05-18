@@ -4,9 +4,6 @@ List of CVE :
 
 ## Description
 
-- [dump_prefix.sh](./dump_previx.sh)  
-- [sqli.sh](./sqli.sh)
-
 To achive rce, you just have to be smart on vbulletin management feature :p  
 or you can read the writeup in @Zenofex discord.
 
